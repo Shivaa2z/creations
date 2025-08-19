@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Shiva A2Z Creations Agency - Movie Production Services</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .service-hero {
+            position: relative;
+            height: 500px;
+            background: linear-gradient(rgba(16, 185, 129, 0.8), rgba(6, 182, 212, 0.8)), url('https://images.pexels.com/photos/7991579/pexels-photo-7991579.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 70px;
+        }
+        
+        .service-hero-content {
+            text-align: center;
+            color: white;
+            max-width: 900px;
+            padding: 0 20px;
+        }
+        
+        .service-hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        
+        .service-hero p {
+            font-size: 1.3rem;
+            opacity: 0.95;
+            line-height: 1.6;
+        }
+        
+        .agency-services {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #f0f9ff 0%, #fef3c7 50%, #fce7f3 100%);
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+        
+        .service-card {
+            background: linear-gradient(135deg, #ffffff 0%, #fefbff 100%);
+            padding: 2.5rem 2rem;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 20px 60px rgba(139, 92, 246, 0.15);
+            transition: all 0.4s ease;
+            border: 2px solid rgba(139, 92, 246, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(135deg, #f59e0b, #ef4444);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+        
+        .service-card:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 35px 80px rgba(139, 92, 246, 0.25);
+        }
+        
+        .service-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 1.5rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            transition: all 0.3s ease;
+        }
+        
+        .service-icon i {
+            font-size: 2rem;
+            color: white;
+        }
+        
+        .service-card:hover .service-icon {
+            transform: scale(1.1) rotate(5deg);
+        }
+        
+        .service-card h3 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: #1f2937;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .service-card p {
+            color: #6b7280;
+            line-height: 1.6;
+            font-size: 1rem;
+        }
+        
+        .job-opportunities {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        
+        .job-form-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            margin-top: 3rem;
+            align-items: start;
+        }
+        
+        .job-info {
+            padding: 2rem;
+        }
+        
+        .job-info h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: #fbbf24;
+        }
+        
+        .job-categories {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .job-categories li {
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .job-categories li i {
+            color: #fbbf24;
+            width: 20px;
+        }
+        
+        .job-form {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2.5rem;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: #fbbf24;
+        }
+        
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            font-family: inherit;
+            transition: all 0.3s ease;
+        }
+        
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: #fbbf24;
+            box-shadow: 0 0 15px rgba(251, 191, 36, 0.3);
+            outline: none;
+        }
+        
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+        }
+        
+        .form-group select option {
+            background: #1f2937;
+            color: white;
+        }
+        
+        .submit-btn {
+            background: linear-gradient(135deg, #f59e0b, #ef4444);
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+            font-size: 1.1rem;
+        }
+        
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(245, 158, 11, 0.5);
+        }
+        
+        .gallery-section {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #fef7ff 0%, #f0f9ff 100%);
+        }
+        
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .gallery-item {
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        
+        .gallery-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.9), rgba(6, 182, 212, 0.9));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+        
+        .gallery-overlay h4 {
+            color: white;
+            font-size: 1.2rem;
+            text-align: center;
+            font-weight: 600;
+        }
+        
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        
+        .contact-cta {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .contact-cta h2 {
+            color: white;
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .contact-cta p {
+            color: #cbd5e1;
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .cta-btn-primary {
+            background: linear-gradient(135deg, #f59e0b, #ef4444);
+            color: white;
+            text-decoration: none;
+            padding: 15px 35px;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+        
+        .cta-btn-secondary {
+            background: transparent;
+            color: white;
+            text-decoration: none;
+            padding: 15px 35px;
+            border: 2px solid white;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+        
+        .cta-btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(245, 158, 11, 0.4);
+        }
+        
+        .cta-btn-secondary:hover {
+            background: white;
+            color: #667eea;
+        }
+        
+        .back-btn {
+            position: fixed;
+            top: 90px;
+            left: 30px;
+            background: linear-gradient(135deg, #ec4899, #8b5cf6);
+            color: white;
+            text-decoration: none;
+            padding: 12px 20px;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .back-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(236, 72, 153, 0.4);
+        }
+        
+        /* Lightbox */
+        .lightbox {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            padding-top: 50px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.95), rgba(30, 30, 30, 0.95));
+            backdrop-filter: blur(10px);
+        }
+        
+        .lightbox-content {
+            margin: auto;
+            display: block;
+            max-width: 90%;
+            max-height: 80%;
+            border-radius: 10px;
+            box-shadow: 0 25px 80px rgba(0, 0, 0, 0.5);
+            border: 2px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .close-lightbox {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+            cursor: pointer;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            backdrop-filter: blur(10px);
+        }
+        
+        .close-lightbox:hover {
+            background: linear-gradient(135deg, #f59e0b, #ef4444);
+            transform: scale(1.1);
+            box-shadow: 0 10px 30px rgba(245, 158, 11, 0.4);
+        }
+        
+        @media (max-width: 768px) {
+            .service-hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .job-form-section {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .back-btn {
+                position: static;
+                margin: 20px auto;
+                display: inline-flex;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Language Bar -->
+    <div class="language-bar">
+        <div class="language-container">
+            <div class="language-selector">
+                <button class="language-btn active" onclick="changeLanguage('en')" data-lang="en">
+                    <i class="fas fa-globe"></i> EN
+                </button>
+                <button class="language-btn" onclick="changeLanguage('te')" data-lang="te">
+                    <i class="fas fa-globe"></i> తె
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html" class="logo-link">
+                    <h2>Shiva Anchor</h2>
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html#home" class="nav-link" data-translate="home">Home</a></li>
+                <li><a href="index.html#about" class="nav-link" data-translate="about">About</a></li>
+                <li><a href="index.html#services" class="nav-link" data-translate="services">Services</a></li>
+                <li><a href="index.html#portfolio" class="nav-link" data-translate="portfolio">Portfolio</a></li>
+                <li><a href="index.html#contact" class="nav-link" data-translate="contact">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Back Button -->
+    <a href="index.html" class="back-btn">
+        <i class="fas fa-arrow-left"></i>
+        <span data-translate="go-back">Go Back</span>
+    </a>
+
+    <!-- Service Hero Section -->
+    <section class="service-hero">
+        <div class="container">
+            <div class="service-hero-content">
+                <h1 data-translate="a2z-agency"> Shiva A2Z Creations Agency</h1>
+                <p data-translate="agency-page-desc">Your complete movie production partner. We provide everything from locations and manpower to casting and materials. Making your film dreams a reality with professional coordination and comprehensive production services.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Agency Services Section -->
+    <section class="agency-services">
+        <div class="container">
+            <h2 class="section-title" data-translate="production-services">Our Production Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3 data-translate="location-scouting">Location Scouting</h3>
+                    <p data-translate="location-scouting-desc">Premium filming locations across the country. From urban landscapes to natural settings, we provide the perfect backdrop for your story with all necessary permits and arrangements.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 data-translate="manpower-crew">Manpower & Crew</h3>
+                    <p data-translate="manpower-crew-desc">Professional film crew including directors, cinematographers, sound engineers, lighting technicians, and production assistants. Experienced teams for projects of any scale.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3 data-translate="casting-services">Casting Services</h3>
+                    <p data-translate="casting-services-desc">Complete casting solutions from lead actors to background artists. Access to our extensive talent database with professional actors, models, and performers.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <h3 data-translate="equipment-materials">Equipment & Materials</h3>
+                    <p data-translate="equipment-materials-desc">State-of-the-art filming equipment, cameras, lighting rigs, sound equipment, props, costumes, and all production materials needed for your project.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-clipboard-list"></i>
+                    </div>
+                    <h3 data-translate="production-coordination">Production Coordination</h3>
+                    <p data-translate="production-coordination-desc">End-to-end project management, scheduling, logistics coordination, permit handling, and ensuring smooth production workflow from pre to post-production.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3 data-translate="producer-support">Producer Support</h3>
+                    <p data-translate="producer-support-desc">Comprehensive support for producers and filmmakers including budget planning, resource allocation, vendor management, and production consulting services.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Job Opportunities Section -->
+    <section class="job-opportunities">
+        <div class="container">
+            <h2 class="section-title" style="color: white;" data-translate="join-team">Join Our Team</h2>
+            <p style="text-align: center; font-size: 1.2rem; margin-bottom: 2rem;" data-translate="movie-opportunities">Looking for opportunities in the movie industry? We're always seeking talented individuals to join our growing team.</p>
+            
+            <div class="job-form-section">
+                <div class="job-info">
+                    <h3 data-translate="available-positions">Available Positions</h3>
+                    <ul class="job-categories">
+                        <li><i class="fas fa-camera"></i> Cinematographers & Camera Operators</li>
+                        <li><i class="fas fa-lightbulb"></i> Lighting Technicians</li>
+                        <li><i class="fas fa-volume-up"></i> Sound Engineers & Boom Operators</li>
+                        <li><i class="fas fa-edit"></i> Video Editors & Post-Production</li>
+                        <li><i class="fas fa-theater-masks"></i> Actors & Performers</li>
+                        <li><i class="fas fa-palette"></i> Makeup Artists & Stylists</li>
+                        <li><i class="fas fa-tools"></i> Production Assistants</li>
+                        <li><i class="fas fa-map"></i> Location Scouts</li>
+                        <li><i class="fas fa-truck"></i> Equipment Handlers</li>
+                        <li><i class="fas fa-clipboard"></i> Production Coordinators</li>
+                        <li><i class="fas fa-shield-alt"></i> Security Personnel</li>
+                        <li><i class="fas fa-utensils"></i> Catering Services</li>
+                    </ul>
+                    
+                    <div style="margin-top: 2rem; padding: 1.5rem; background: rgba(251, 191, 36, 0.1); border-radius: 10px; border-left: 4px solid #fbbf24;">
+                        <h4 style="color: #fbbf24; margin-bottom: 1rem;" data-translate="why-work-us">Why Work With Us?</h4>
+                        <ul style="list-style: none; padding: 0;">
+                            <li style="margin-bottom: 0.5rem;"><i class="fas fa-check" style="color: #fbbf24; margin-right: 10px;"></i> <span data-translate="competitive-compensation">Competitive compensation</span></li>
+                            <li style="margin-bottom: 0.5rem;"><i class="fas fa-check" style="color: #fbbf24; margin-right: 10px;"></i> <span data-translate="exciting-projects">Work on exciting projects</span></li>
+                            <li style="margin-bottom: 0.5rem;"><i class="fas fa-check" style="color: #fbbf24; margin-right: 10px;"></i> <span data-translate="growth-opportunities">Professional growth opportunities</span></li>
+                            <li style="margin-bottom: 0.5rem;"><i class="fas fa-check" style="color: #fbbf24; margin-right: 10px;"></i> <span data-translate="flexible-scheduling">Flexible scheduling</span></li>
+                            <li><i class="fas fa-check" style="color: #fbbf24; margin-right: 10px;"></i> <span data-translate="industry-networking">Industry networking</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="job-form">
+                    <h3 style="text-align: center; margin-bottom: 2rem; color: #fbbf24;">Apply Now</h3>
+                    <!-- <h3 style="text-align: center; margin-bottom: 2rem; color: #fbbf24;" data-translate="apply-now">Apply Now</h3> -->
+                    <form onsubmit="handleJobApplication(event)">
+                        <div class="form-group">
+                            <label for="fullName" data-translate="full-name">Full Name *</label>
+                            <input type="text" id="fullName" name="fullName" data-translate="enter-full-name" placeholder="Enter your full name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email" data-translate="email-address">Email Address *</label>
+                            <input type="email" id="email" name="email" data-translate="email-placeholder" placeholder="your.email@example.com" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone" data-translate="phone-number">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" data-translate="phone-placeholder" placeholder="+1 (555) 123-4567" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="position" data-translate="position-interested">Position Interested In *</label>
+                            <select id="position" name="position" required>
+                                <option value="" data-translate="select-position">Select a position</option>
+                                <option value="cinematographer">Cinematographer</option>
+                                <option value="lighting">Lighting Technician</option>
+                                <option value="sound">Sound Engineer</option>
+                                <option value="editor">Video Editor</option>
+                                <option value="actor">Actor/Performer</option>
+                                <option value="makeup">Makeup Artist</option>
+                                <option value="assistant">Production Assistant</option>
+                                <option value="scout">Location Scout</option>
+                                <option value="equipment">Equipment Handler</option>
+                                <option value="coordinator">Production Coordinator</option>
+                                <option value="security">Security Personnel</option>
+                                <option value="catering">Catering Services</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="experience" data-translate="years-experience">Years of Experience</label>
+                            <select id="experience" name="experience">
+                                <option value="" data-translate="select-experience">Select experience level</option>
+                                <option value="fresher">Fresher (0 years)</option>
+                                <option value="1-2">1-2 years</option>
+                                <option value="3-5">3-5 years</option>
+                                <option value="5-10">5-10 years</option>
+                                <option value="10+">10+ years</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="portfolio" data-translate="portfolio-resume">Portfolio/Resume Link</label>
+                            <input type="url" id="portfolio" name="portfolio" data-translate="portfolio-placeholder" placeholder="https://your-portfolio.com">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="availability" data-translate="availability">Availability</label>
+                            <select id="availability" name="availability">
+                                <option value="" data-translate="select-availability">Select availability</option>
+                                <option value="full-time">Full-time</option>
+                                <option value="part-time">Part-time</option>
+                                <option value="freelance">Freelance/Project-based</option>
+                                <option value="weekends">Weekends only</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message" data-translate="tell-about-yourself">Tell us about yourself *</label>
+                            <textarea id="message" name="message" rows="4" data-translate="share-experience" placeholder="Share your experience, skills, and why you want to work with A2Z Creations..." required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn">
+                            <i class="fas fa-paper-plane"></i> <span data-translate="submit-application">Submit Application</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery-section">
+        <div class="container">
+            <h2 class="section-title" data-translate="work-portfolio">Our Work Portfolio</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="./images/S16.jpeg" alt="Movie Set Production" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h4 data-translate="feature-film">Feature Film Production<br>"City Lights" - 2024</h4>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="./images/S12.jpeg" alt="Casting Session" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h4 data-translate="casting-session">Casting Session<br>Lead Role Selection</h4>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="./images/S20.jpeg" alt="Location Scouting" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h4 data-translate="premium-locations">Premium Locations<br>Urban & Natural Settings</h4>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="./images/S19.jpeg" alt="Equipment Setup" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h4 data-translate="professional-equipment">Professional Equipment<br>4K Cinema Cameras</h4>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="./images/S3.jpeg" alt="Crew Coordination" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h4 data-translate="expert-crew">Expert Crew<br>Professional Team</h4>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="./images/S10.jpeg" alt="Post Production" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h4 data-translate="post-production-work">Post-Production<br>Editing & VFX</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact CTA -->
+    <section class="contact-cta">
+        <div class="container">
+            <h2 data-translate="ready-start-project">Ready to Start Your Project?</h2>
+            <p data-translate="handle-production-needs">Let Shiva  A2Z Creations Agency handle all your movie production needs from start to finish</p>
+            <div class="cta-buttons">
+                <a href="index.html#contact" class="cta-btn-primary" data-translate="get-quote">Get Quote</a>
+                <a href="tel:+91 9908622259" class="cta-btn-secondary" data-translate="call-now">Call Now</a>
+            </div>
+        </div>
+    </section>
+
+  <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 data-translate="contact-info">Contact Info</h3>
+                    <div class="contact-info">
+                        <p><i class="fas fa-phone"></i> 9908622259</p>
+                        <p><i class="fas fa-envelope"></i> shiva@shivaanchor.com</p>
+                        <p><i class="fas fa-map-marker-alt"></i>Nowlekal,kurnool Ap 518323</p>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3 data-translate="follow-me">Follow Me</h3>
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com/sivaa2zcreations?igsh=YjI3MXhwazBwb3Jx" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="www.youtube.com/@sivaa2zcreations" target="_blank"><i class="fab fa-youtube"></i></a>
+                        <a href="www.youtube.com/@sivaa2zcreations" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://m.facebook.com/100063830568660/" target="_blank"><i class="fab fa-facebook"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                                <p>&copy; 2025 shiva a2z creations . All rights reserved. | Developed by ❤️Pavan </p>
+
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+        <span class="close-lightbox">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Job application form handler
+        function handleJobApplication(event) {
+            event.preventDefault();
+            
+            const formData = new FormData(event.target);
+            const name = formData.get('fullName');
+            const email = formData.get('email');
+            const position = formData.get('position');
+            
+            // Simulate form submission
+            const submitBtn = event.target.querySelector('.submit-btn');
+            const originalText = submitBtn.innerHTML;
+            
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Submitting...';
+            submitBtn.disabled = true;
+            
+            setTimeout(() => {
+                alert(`Thank you ${name}! Your application for ${position} position has been submitted successfully. We'll contact you at ${email} within 48 hours.`);
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
+                event.target.reset();
+            }, 2000);
+        }
+
+        // Gallery lightbox functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const galleryItems = document.querySelectorAll('.gallery-item');
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            const closeLightbox = document.querySelector('.close-lightbox');
+            
+            galleryItems.forEach(item => {
+                item.addEventListener('click', () => {
+                    const img = item.querySelector('img');
+                    if (lightboxImg) {
+                        lightboxImg.src = img.src;
+                        lightboxImg.alt = img.alt;
+                    }
+                    if (lightbox) {
+                        lightbox.style.display = 'block';
+                        document.body.style.overflow = 'hidden';
+                    }
+                });
+            });
+            
+            if (closeLightbox && lightbox) {
+                closeLightbox.addEventListener('click', () => {
+                    lightbox.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                });
+            }
+            
+            if (lightbox) {
+                lightbox.addEventListener('click', (e) => {
+                    if (e.target === lightbox) {
+                        lightbox.style.display = 'none';
+                        document.body.style.overflow = 'auto';
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shiva A2Z creations - Actor, Influencer, Anchor & Coordinator</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Language Bar -->
+    <div class="language-bar">
+        <div class="language-container">
+            <div class="language-selector">
+                <button class="language-btn active" onclick="changeLanguage('en')" data-lang="en">
+                    <i class="fas fa-globe"></i> EN
+                </button>
+                <button class="language-btn" onclick="changeLanguage('te')" data-lang="te">
+                    <i class="fas fa-globe"></i> తె
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="#home" class="logo-link">
+                    <h2>Shiva A2Z creations</h2>
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Slider -->
+    <section id="home" class="hero">
+        <div class="slider-container">
+            <div class="slide active">
+                <video class="slide-video" autoplay muted loop>
+                    <source src="./images/Vid 3.mp4" type="video/mp4">
+                </video>
+                <div class="slide-content">
+                    <h1 data-translate="hero-title-1">Professional Anchor & Content Creator</h1>
+                    <p data-translate="hero-desc-1">Bringing stories to life through compelling performances and engaging content</p>
+                    <button class="cta-btn" onclick="window.open('https://youtube.com/@a2zcreations', '_blank')" data-translate="watch-videos">Watch Videos</button>
+                </div>
+            </div>
+            <div class="slide">
+                <video class="slide-video" muted loop>
+                    <source src="./images/vid 4.mp4" type="video/mp4">
+                </video>
+                <div class="slide-content">
+                    <h1 data-translate="hero-title-2">Award-Winning Anchor</h1>
+                    <p data-translate="hero-desc-2">Hosting events and shows with charisma and professionalism</p>
+                    <button class="cta-btn" onclick="scrollToSection('contact')" data-translate="book-now">Book Now</button>
+                </div>
+            </div>
+            <div class="slide">
+                <video class="slide-video" muted loop>
+                    <source src="./images/Vid 2.mp4" type="video/mp4">
+                </video>
+                <div class="slide-content">
+                    <h1 data-translate="hero-title-3">shiva A2Z creations Agency</h1>
+                    <p data-translate="hero-desc-3">Dedicated coordinator for movie makers and producers</p>
+                    <button class="cta-btn" onclick="scrollToSection('social-stats')" data-translate="see-stats">See Stats</button>
+                </div>
+            </div>
+        </div>
+        <div class="slider-nav">
+            <button class="prev-btn"><i class="fas fa-chevron-left"></i></button>
+            <button class="next-btn"><i class="fas fa-chevron-right"></i></button>
+        </div>
+        <div class="slider-dots">
+            <span class="dot active" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+    </section>
+
+    <!-- Social Media Stats -->
+    <section id="social-stats" class="social-stats">
+        <div class="container">
+            <h2 class="section-title">Social Media Reach</h2>
+            <div class="stats-grid">
+                <div class="stat-card instagram">
+                    <i class="fab fa-instagram"></i>
+                    <h3><span class="counter" data-target="20000">0</span>+</h3>
+                    <p data-translate="instagram-followers">Instagram Followers</p>
+                    <a href="https://www.instagram.com/sivaa2zcreations?igsh=YjI3MXhwazBwb3Jx" target="_blank" class="social-link">Follow</a>
+                </div>
+                <div class="stat-card youtube">
+                    <i class="fab fa-youtube"></i>
+                    <h3><span class="counter" data-target="219000">0</span>+</h3>
+                    <p data-translate="youtube-subscribers">a2zcreations Subscribers</p>
+                    <a href="www.youtube.com/@sivaa2zcreations" target="_blank" class="social-link">Subscribe</a>
+                </div>
+                <div class="stat-card twitter">
+                    <i class="fab fa-twitter"></i>
+                    <h3><span class="counter" data-target="10000">0</span>+</h3>
+                    <p data-translate="twitter-followers">Twitter Followers</p>
+                    <a href="www.youtube.com/@sivaa2zcreations" target="_blank" class="social-link">Follow</a>
+                </div>
+                <div class="stat-card facebook">
+                    <i class="fab fa-facebook"></i>
+                    <h3><span class="counter" data-target="10000">0</span>+</h3>
+                    <p data-translate="facebook-fans">Facebook Fans</p>
+                    <a href="https://m.facebook.com/100063830568660/" target="_blank" class="social-link">Like</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title">My Services</h2>
+            <div class="services-grid">
+                <div class="service-card anchoring" data-tilt>
+                    <img src="./images/S6.jpeg" alt="Professional Anchoring" class="service-thumbnail">
+                    <div class="service-icon">
+                        <i class="fas fa-microphone"></i>
+                    </div>
+                    <h3 data-translate="anchoring">Anchoring</h3>
+                    <p data-translate="anchoring-desc">Professional event hosting, award shows, corporate events, and live television programs.</p>
+                    <a href="anchoring.html" class="service-btn">Learn More</a>
+                </div>
+                <div class="service-card acting" data-tilt>
+                    <img src="./images/S11.jpeg" alt="Professional Acting" class="service-thumbnail">
+                    <div class="service-icon">
+                        <i class="fas fa-theater-masks"></i>
+                    </div>
+                    <h3 data-translate="acting">Acting</h3>
+                    <p data-translate="acting-desc">Film, television, and theater performances with versatility and emotional depth.</p>
+                    <a href="acting.html" class="service-btn">Learn More</a>
+                </div>
+                <div class="service-card branding" data-tilt>
+                    <img src="./images/S17.jpeg" alt="A2Z Creations Agency" class="service-thumbnail">
+                    <div class="service-icon">
+                        <i class="fas fa-film"></i>
+                    </div>
+                    <h3 data-translate="agency">A2Z Creations Agency</h3>
+                    <p data-translate="agency-desc">Complete movie production services including locations, manpower, casting, and materials for filmmakers.</p>
+                    <a href="branding.html" class="service-btn">Learn More</a>
+                </div>
+                <div class="service-card video-shooting" data-tilt>
+                    <img src="./images/S4.jpeg" alt="Video Production" class="service-thumbnail">
+                    <div class="service-icon">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <h3 data-translate="video-shooting">Video Shooting</h3>
+                    <p data-translate="video-shooting-desc">Professional video production, commercials, music videos, and creative content.</p>
+                    <a href="video-shooting.html" class="service-btn">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="./images/S17.jpeg" alt="Alex Morgan" class="profile-img">
+                    <div class="image-overlay"></div>
+                </div>
+                <div class="about-text">
+                    <h2 data-translate="about-shiva">About Shiva Anchor</h2>
+                    <p data-translate="about-desc-1">With over 15 years of experience in the entertainment industry, Shiva Anchor has established himself as a versatile performer and influential content creator. From hosting major events to creating engaging content for a2zcreations, Shiva brings authenticity and professionalism to every project.</p>
+                    
+                    <p data-translate="about-desc-2">His journey began with anchoring local events during college, which quickly evolved into television hosting and digital content creation. Today, Shiva is not just an anchor but a digital entrepreneur who has built a massive following through a2zcreations, inspiring millions with his creative content and positive message.</p>
+                    
+                    <p data-translate="about-desc-3">Shiva's commitment to excellence and his ability to connect with audiences has made him one of the most sought-after talents in the industry. Whether it's hosting an event, creating content for a2zcreations, or a brand campaign, Shiva delivers with passion and precision.</p>
+                    
+                    <button  class="download-btn" onclick="">
+                        <span  data-translate="download-portfolio"> <a href="tel:+919908622259">Call Now</a></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="about-bg-shape"></div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="achievement-stats">
+        <div class="container">
+            <div class="stats-row">
+                <div class="stat-item">
+                    <h3><span class="counter" data-target="15">0</span>+</h3>
+                    <p data-translate="years-experience">Years Experience</p>
+                </div>
+                <div class="stat-item">
+                    <h3><span class="counter" data-target="50">0</span>+</h3>
+                    <p data-translate="projects-completed">Projects Completed</p>
+                </div>
+                <div class="stat-item">
+                    <h3><span class="counter" data-target="25">0</span>+</h3>
+                    <p data-translate="awards-won">Awards Won</p>
+                </div>
+                <div class="stat-item">
+                    <h3><span class="counter" data-target="50">0</span>+</h3>
+                    <p data-translate="brand-partners">Brand Partners</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <h2 class="section-title" data-translate="my-portfolio">My Portfolio</h2>
+            <div class="portfolio-tabs">
+                <button class="tab-btn active" data-tab="all" data-translate="all">All</button>
+                <button class="tab-btn" data-tab="videos" data-translate="videos">Videos</button>
+                <button class="tab-btn" data-tab="images" data-translate="images">Images</button>
+            </div>
+            <div class="portfolio-grid">
+                <!-- Video Items -->
+                <div class="portfolio-item video" data-category="videos">
+                    <div class="portfolio-overlay">
+                        <i class="fas fa-play"></i>
+                    </div>
+                    <img src="https://i.ytimg.com/vi/Tdw5FWdftVY/hqdefault.jpg?sqp=-oaymwEnCNACELwBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLA2Z-IIltAmm3uUOpRNLyc8lRa80A" alt="Acting Showreel 2024" data-video-id="Tdw5FWdftVY" loading="lazy">
+                </div>
+                <div class="portfolio-item video" data-category="videos">
+                    <div class="portfolio-overlay">
+                        <i class="fas fa-play"></i>
+                    </div>
+                    <img src="https://i.ytimg.com/vi/-52cF_6tQAo/hqdefault.jpg?sqp=-oaymwEnCNACELwBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLBdcgFOkC82qtbEj6TYVzvxGY4gQA" alt="Behind the Scenes" data-video-id="-52cF_6tQAo" loading="lazy">
+                </div>
+                <div class="portfolio-item video" data-category="videos">
+                    <div class="portfolio-overlay">
+                        <i class="fas fa-play"></i>
+                    </div>
+                    <img src="https://i.ytimg.com/vi/ME9JIUpL7Tw/hqdefault.jpg?sqp=-oaymwEnCNACELwBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLBNHUQI9OSct9LgdrO4UROu2d5nxQ" alt="Commercial Work" data-video-id="ME9JIUpL7Tw" loading="lazy">
+                </div>
+                
+                <!-- Image Items -->
+                <div class="portfolio-item image" data-category="images">
+                    <div class="portfolio-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                    <img src="./images/S10.jpeg" alt="Professional Portrait 1" loading="lazy">
+                </div>
+                <div class="portfolio-item image" data-category="images">
+                    <div class="portfolio-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                    <img src="./images/S20.jpeg" alt="Professional Portrait 2" loading="lazy">
+                </div>
+                <div class="portfolio-item image" data-category="images">
+                    <div class="portfolio-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                    <img src="./images/S5.jpeg" alt="Professional Portrait 3" loading="lazy">
+                </div>
+                <div class="portfolio-item image" data-category="images">
+                    <div class="portfolio-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                    <img src="./images/S3.jpeg" alt="Professional Portrait 4" loading="lazy">
+                </div>
+                <div class="portfolio-item image" data-category="images">
+                    <div class="portfolio-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                    <img src="./images/S12.jpeg" alt="Professional Portrait 5" loading="lazy">
+                </div>
+                <div class="portfolio-item video" data-category="videos">
+                    <div class="portfolio-overlay">
+                        <i class="fas fa-play"></i>
+                    </div>
+                    <img src="https://i.ytimg.com/vi/h15cEygfzPU/hqdefault.jpg?sqp=-oaymwFBCNACELwBSFryq4qpAzMIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB8AEB-AH-CYAC0AWKAgwIABABGGUgUSg-MA8=&rs=AOn4CLAyFM_ffrgnvFk3LCOgHCewphchxw" alt="Latest Project" data-video-id="h15cEygfzPU" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer with Contact -->
+    <footer id="contact" class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 data-translate="get-in-touch">Get In Touch</h3>
+                    <form class="contact-form" onsubmit="handleSubmit(event)">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Your Name" data-translate="your-name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Your Email" data-translate="your-email" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" placeholder="Your Message" data-translate="your-message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn" data-translate="send-message">Send Message</button>
+                    </form>
+                </div>
+                <div class="footer-section">
+                    <h3 data-translate="contact-info">Contact Info</h3>
+                    <div class="contact-info">
+                        <p><i class="fas fa-phone"></i> +91 9908622259</p>
+                        <p><i class="fas fa-envelope"></i>meranna007@gmail.com</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Nowlekal,kurnool Ap 518323</p>
+                    </div>
+                    <div class="social-icons">
+                        <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://youtube.com/@a2zcreations" target="_blank"><i class="fab fa-youtube"></i></a>
+                        <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 shiva a2z creations . All rights reserved. | Developed by ❤️Pavan </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+        <span class="close-lightbox">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+        <div class="lightbox-video" id="lightbox-video"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
